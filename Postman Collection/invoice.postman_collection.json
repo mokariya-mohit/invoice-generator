@@ -1,0 +1,2494 @@
+{
+	"info": {
+		"_postman_id": "c12d04c0-fd05-4416-99e2-95c7e3220a2a",
+		"name": "invoice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39034956",
+		"_collection_link": "https://team-invoice-7522.postman.co/workspace/Team-invoice-Workspace~3f57232a-aaea-4024-802a-4acc74743059/collection/39006752-c12d04c0-fd05-4416-99e2-95c7e3220a2a?action=share&source=collection_link&creator=39034956"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mohit",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "india",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "130,vivekanandsoc,surat",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "surat",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "gujrat",
+									"type": "text"
+								},
+								{
+									"key": "zipCode",
+									"value": "395006",
+									"type": "text"
+								},
+								{
+									"key": "Category",
+									"value": "contractor",
+									"type": "text"
+								},
+								{
+									"key": "BusinessId",
+									"value": "675b7ad2a788daf05731101f",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "8574965741",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "833598",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/registerUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"registerUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginuser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://invoich-backend-2.onrender.com/api/user/userlogin",
+							"protocol": "https",
+							"host": [
+								"invoich-backend-2",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"userlogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateuser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY0OTRlNTJjNmU0YzlmNzUyZjVkMmYiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDY0NTAzMiwiZXhwIjoxNzM0NjQ4NjMyfQ.CjgCs26y3bbXTCJR5ob7qmYMZOlL-HsALYpB8AtLiUQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mohit",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "india",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "130,vivekanandsoc,surat",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "surat",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "gujrat",
+									"type": "text"
+								},
+								{
+									"key": "zipCode",
+									"value": "395006",
+									"type": "text"
+								},
+								{
+									"key": "Category",
+									"value": "contractor",
+									"type": "text"
+								},
+								{
+									"key": "BusinessId",
+									"value": "675b7ad2a788daf05731101f",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "8574965741",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/updateuser/676496aa4d21484d89db5cc6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"updateuser",
+								"676496aa4d21484d89db5cc6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteuser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzViN2IyYzNkMWM2OWI3NjkzOGY4ZjciLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDExNDQ0MywiZXhwIjoxNzM0MTE4MDQzfQ.7DYFsGW86fB3qRX2qNX2GK9s3-w_zkbHMRH66IfdLws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/user/deleteuser/675b7b2c3d1c69b76938f8f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"deleteuser",
+								"675b7b2c3d1c69b76938f8f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgate-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzYwYWUzNzYwOTFmMDE0NDg0OTc5ODgiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDQ3ODAwOSwiZXhwIjoxNzM0NDgxNjA5fQ.-ki--zIT_vsfSaSF-GBl4ClxautLMF0z-kUx9_WBV0g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyotp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVjODI4NzU4ZDQxMmM0OTg4NTA0YjYiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDE5ODM5NiwiZXhwIjoxNzM0MjAxOTk2fQ.gbtInLd-IksUr2Q2cK8YEgrjhToI3KUq-d8d4k7d71E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "otp",
+									"value": "794746",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/verifyOtp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"verifyOtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetpassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVjODI4NzU4ZDQxMmM0OTg4NTA0YjYiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDIwMDU0MSwiZXhwIjoxNzM0MjA0MTQxfQ.neFlFyYe5MTKBDKbxRCVNXhMJdAZDEy2ycqlLDHAXXQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "newPassword",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cheangpassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjM2NiMjE2ZDFhYWU2MDlmOGVlZDIiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTE0NjcwMCwiZXhwIjoxNzM1MjMzMTAwfQ.rC0MLXHIXF4d5aGxZVvjzq8SsCCzTzTei7BiGJ1fIBs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/changePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getalluser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzYwNmFlMzkwMmQ5ZTdjMTg5NTgyYzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDM3MjExOSwiZXhwIjoxNzM0Mzc1NzE5fQ.ECfUeiAdrfkeQwbQyt9uo1180JQYos6Ee_uNyo7hOOU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/getalluser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"getalluser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getuserbyId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzYwNmFlMzkwMmQ5ZTdjMTg5NTgyYzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDM3MjExOSwiZXhwIjoxNzM0Mzc1NzE5fQ.ECfUeiAdrfkeQwbQyt9uo1180JQYos6Ee_uNyo7hOOU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/getuserbyid/67606ae3902d9e7c189582c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"getuserbyid",
+								"67606ae3902d9e7c189582c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activedeactiveuser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY0OTZhYTRkMjE0ODRkODlkYjVjYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDcxODQyOSwiZXhwIjoxNzM0NzIyMDI5fQ.NnUYQMkmcG2NTyGXk2fYYPVKP2ufLOoKctwXGLbI_Y8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/user/userstatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"userstatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Business",
+			"item": [
+				{
+					"name": "Register Business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "companyName",
+									"value": "Swiftroot Pvt Ltd",
+									"type": "text"
+								},
+								{
+									"key": "companyAddress",
+									"value": "123 Tech Park, Silicon Valley",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rupesh.jagatiya@swiftrut.com",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "7698235220",
+									"type": "text"
+								},
+								{
+									"key": "prefix",
+									"value": "SR",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/Vector.png"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/business/registerBusiness",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"registerBusiness"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mohit123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/business/loginBusiness",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"loginBusiness"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Business",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWI3YWQyYTc4OGRhZjA1NzMxMTAxZiIsInJvbGUiOiJidXNpbmVzcyIsImlhdCI6MTczNDExMDA5NSwiZXhwIjoxNzM0MTEzNjk1fQ.tMGPGNxmYg5uGFbCQ2isCtIIrS6OGf8M8CduOvaAl7g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/business/getBusiness",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"getBusiness"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Business By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWI3ODI1M2FhZmI2MGQ1ODRiNzYwMCIsInJvbGUiOiJidXNpbmVzcyIsImlhdCI6MTczNDA0Nzc5OSwiZXhwIjoxNzM0MDUxMzk5fQ.lL6py0AE99HHuupVl7v24O1ifRaMaWpUsB6RxwZtHSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/business/getBusinessByID/675b62381edd3cb949525c56",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"getBusinessByID",
+								"675b62381edd3cb949525c56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Business",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWI2MjM4MWVkZDNjYjk0OTUyNWM1NiIsInJvbGUiOiJidXNpbmVzcyIsImlhdCI6MTczNDA0MzIzNiwiZXhwIjoxNzM0MDQ2ODM2fQ.qPu_K_g5ooIIjoozaWwUkSry7ztFmEZChaMIu7P1ZlU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "companyName",
+									"value": "Tech Solutions Ltd.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "companyAddress",
+									"value": "1234 Innovation Drive, Silicon Valley",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "mohit.@swiftrut.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "number",
+									"value": "7698235220",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "prefix",
+									"value": "SR",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/sss.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/business/updateBusiness/6776cb13f633a5f4c6834019",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"updateBusiness",
+								"6776cb13f633a5f4c6834019"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Business",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWI3ODI1M2FhZmI2MGQ1ODRiNzYwMCIsInJvbGUiOiJidXNpbmVzcyIsImlhdCI6MTczNDA0Nzc5OSwiZXhwIjoxNzM0MDUxMzk5fQ.lL6py0AE99HHuupVl7v24O1ifRaMaWpUsB6RxwZtHSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/business/deleteBusiness/675b78253aafb60d584b7600",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"deleteBusiness",
+								"675b78253aafb60d584b7600"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWI3YWQyYTc4OGRhZjA1NzMxMTAxZiIsInJvbGUiOiJidXNpbmVzcyIsImlhdCI6MTczNDExMDA5NSwiZXhwIjoxNzM0MTEzNjk1fQ.tMGPGNxmYg5uGFbCQ2isCtIIrS6OGf8M8CduOvaAl7g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/business/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mohit.mokariya@swiftrut.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/business/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "businessId",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "otp",
+									"value": "200960",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/business/verify-otp/675b7ad2a788daf05731101f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"verify-otp",
+								"675b7ad2a788daf05731101f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "newPassword",
+									"value": "mohit123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/business/reset-password/675b7ad2a788daf05731101f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"business",
+								"reset-password",
+								"675b7ad2a788daf05731101f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerType\": \"individual\",\r\n  \"firstName\": \"Mohit\",\r\n  \"lastName\": \"Mokariya\",\r\n  \"companyName\": \"SfitRut\",\r\n  \"displayName\": \"mohit_mokariya_123\",\r\n  \"currency\": \"RS\",\r\n  \"email\": \"mohit.mokariya@swiftrut.com\",\r\n  \"phoneNumber\": \"7698235220\",\r\n  \"mobileNumber\": \"7698235220\",\r\n  \"userId\": \"675b7b2c3d1c69b76938f8f7\",\r\n  \"otherDetails\": [\r\n    {\r\n      \"paymentTerms\": \"Net 30\",\r\n      \"remarks\": \"Preferred customer\"\r\n    }\r\n  ],\r\n  \"addresses\": [\r\n    {\r\n      \"billingAddress\": {\r\n        \"attention\": \"Mohit Mokariya\",\r\n        \"countryRegion\": \"India\",\r\n        \"address\": \"123 Business Blvd\",\r\n        \"city\": \"Surat\",\r\n        \"state\": \"Gujarat\",\r\n        \"pinCode\": \"395006\",\r\n        \"phone\": \"7698235220\"\r\n      },\r\n      \"shippingAddress\": {\r\n        \"attention\": \"Mohit Mokariya\",\r\n        \"countryRegion\": \"India\",\r\n        \"address\": \"456 Shipping St\",\r\n        \"city\": \"Surat\",\r\n        \"state\": \"Gujarat\",\r\n        \"pinCode\": \"39506\",\r\n        \"phone\": \"7698235220\"\r\n      }\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/customer/createCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"customer",
+								"createCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/customer/viewCustomers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"customer",
+								"viewCustomers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Customer By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/customer/viewCustomers/?customerId=67699b0fdcfde909170e6693",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"customer",
+								"viewCustomers",
+								""
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "67699b0fdcfde909170e6693"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer By ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerType\": \"individual\",\r\n  \"firstName\": \"Mohit\",\r\n  \"lastName\": \"Mokariya\",\r\n  \"companyName\": \"SfitRut\",\r\n  \"displayName\": \"mohit_mokariya_123\",\r\n  \"currency\": \"RS\",\r\n  \"email\": \"mohit.mokariya@swiftrut.com\",\r\n  \"phoneNumber\": \"7698235220\",\r\n  \"mobileNumber\": \"7698235220\",\r\n  \"userId\": \"675b7b2c3d1c69b76938f8f7\",\r\n  \"otherDetails\": [\r\n    {\r\n      \"paymentTerms\": \"Net 30\",\r\n      \"remarks\": \"Preferred customer\"\r\n    }\r\n  ],\r\n  \"addresses\": [\r\n    {\r\n      \"billingAddress\": {\r\n        \"attention\": \"Mohit Mokariya\",\r\n        \"countryRegion\": \"India\",\r\n        \"address\": \"123 Business Blvd\",\r\n        \"city\": \"Surat\",\r\n        \"state\": \"Gujarat\",\r\n        \"pinCode\": \"395006\",\r\n        \"phone\": \"7698235220\"\r\n      },\r\n      \"shippingAddress\": {\r\n        \"attention\": \"Mohit Mokariya\",\r\n        \"countryRegion\": \"India\",\r\n        \"address\": \"456 Shipping St\",\r\n        \"city\": \"Surat\",\r\n        \"state\": \"Gujarat\",\r\n        \"pinCode\": \"39506\",\r\n        \"phone\": \"7698235220\"\r\n      }\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/customer/updateCustomer/?id=675c7fe6386d3c77b388d583",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"customer",
+								"updateCustomer",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "675c7fe6386d3c77b388d583"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/customer/deleteCustomer/?id=675c7fe6386d3c77b388d583",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"customer",
+								"deleteCustomer",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "675c7fe6386d3c77b388d583"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customercsv",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/rahul_customer.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/customer/Customercsv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"customer",
+								"Customercsv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Create Invoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhYTYwODhkZGE0OGFiMjA5ZmVlYzciLCJyb2xlIjoidXNlciIsImlhdCI6MTczODE4OTE0NSwiZXhwIjoxNzM4Mjc1NTQ1fQ.13YAl9_teeKBbK0qNvwjjVreBWVDz7T4nfH5WJ3tHFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer",
+									"value": "67699b0fdcfde909170e6693",
+									"type": "text"
+								},
+								{
+									"key": "invoiceDate",
+									"value": "2024-12-15",
+									"type": "text"
+								},
+								{
+									"key": "dueDate",
+									"value": "2024-12-26",
+									"type": "text"
+								},
+								{
+									"key": "terms",
+									"value": "Net 30",
+									"type": "text"
+								},
+								{
+									"key": "items",
+									"value": "[{\"item\": \"67771c4a278d72ec96411436\", \"quantity\": 10, \"price\":\"111\"}]",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/wallpapersden.com_millie-bobby-brown-in-stranger-things_7680x4320.jpg"
+								},
+								{
+									"key": "salesperson",
+									"value": "676d8f1ebac07a42292d8864",
+									"type": "text"
+								},
+								{
+									"key": "recurring",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "nextInvoiceDate",
+									"value": "2024-12-21",
+									"type": "text"
+								},
+								{
+									"key": "templateId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "#000000",
+									"type": "text"
+								},
+								{
+									"key": "font",
+									"value": "sans serif",
+									"type": "text"
+								},
+								{
+									"key": "freightCharges",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "freightTax",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/invoice/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"invoice",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View All Invoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNzU2NzMyNSwiZXhwIjoxNzM3NjUzNzI1fQ.RQMStD30_HLyoCfKgCVQVjIwlzS0rjfYxJxYu96tmJ8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/invoice/viewAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"invoice",
+								"viewAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Invoice By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTg2MTYwNiwiZXhwIjoxNzM1OTQ4MDA2fQ.gvvfVBQYtDxL1Uj2z5LescjYpp7vSc-nJQU_GAymoE4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/invoice/ViewById/6778275f81cc144d35d9b0d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"invoice",
+								"ViewById",
+								"6778275f81cc144d35d9b0d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Invoice By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTc2ODQ4MCwiZXhwIjoxNzM1ODU0ODgwfQ.HG1PgdNyM0gWpq6bxG59cXGf9ouTNMruCpBC4qa6EKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer",
+									"value": "67699b0fdcfde909170e6693",
+									"type": "text"
+								},
+								{
+									"key": "invoiceDate",
+									"value": "2024-12-25",
+									"type": "text"
+								},
+								{
+									"key": "dueDate",
+									"value": "2024-12-26",
+									"type": "text"
+								},
+								{
+									"key": "terms",
+									"value": "Net 30",
+									"type": "text"
+								},
+								{
+									"key": "items",
+									"value": "[{\"item\": \"6775b663c0ed56e5801febdf\", \"quantity\": 6}]",
+									"type": "text"
+								},
+								{
+									"key": "salesperson",
+									"value": "676d8f1ebac07a42292d8864",
+									"type": "text"
+								},
+								{
+									"key": "recurring",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "nextInvoiceDate",
+									"value": "2024-12-21",
+									"type": "text"
+								},
+								{
+									"key": "templateId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/16.png"
+								},
+								{
+									"key": "color",
+									"value": "#111111",
+									"type": "text"
+								},
+								{
+									"key": "font",
+									"value": "Sefif",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/invoice/updateById/6776d0d8a24c56655c83ef70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"invoice",
+								"updateById",
+								"6776d0d8a24c56655c83ef70"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Invoice By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNjI3NDcxNCwiZXhwIjoxNzM2MzYxMTE0fQ.O-iwz7F-R4r1WRDmF2EfCuw2K2jLbkFXLpSaErhlShY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/invoice/deleteById/677dba9942103f4d269dc91f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"invoice",
+								"deleteById",
+								"677dba9942103f4d269dc91f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNjM2MTIxNSwiZXhwIjoxNzM2NDQ3NjE1fQ.PIIfqGXaehL8C4T0_joWk3XEnE0vZsjesLpKb0P3qAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/Invoice.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/invoice/bulkupload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"invoice",
+								"bulkupload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Expenses",
+			"item": [
+				{
+					"name": "addExpenses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTgzMjk5NSwiZXhwIjoxNzM1OTE5Mzk1fQ.KJ0vF492v-xl_kMdxvbTpQ0YJzZzUiNcAoyfP6X134Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "i like bike",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "350000",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-23",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Entertainment",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/bankSSSSS.csv.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/expenses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateExpense",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTU4NDIwMiwiZXhwIjoxNzM1NjcwNjAyfQ.dscIyJp1ffi5xxeusiLAp1JnpWYTnJR-Na_DYu4s4zg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "to buy chips",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-23",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Entertainment",
+									"type": "text"
+								},
+								{
+									"key": "recipeimage",
+									"type": "file",
+									"src": "/C:/Users/01/Pictures/Screenshots/Screenshot 2024-11-27 044906.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/expenses/6772f1537b5d3b5ce070f9b2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"expenses",
+								"6772f1537b5d3b5ce070f9b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllExpenses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTMzMzczNCwiZXhwIjoxNzM1NDIwMTM0fQ.zeCjyOTZxAwsksO4rkRmjyrdWotaSvfozQu-tqWqeFw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/expenses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getExpenseById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTMzMzczNCwiZXhwIjoxNzM1NDIwMTM0fQ.zeCjyOTZxAwsksO4rkRmjyrdWotaSvfozQu-tqWqeFw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/expenses/676f1635d442918b7a23bb22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"expenses",
+								"676f1635d442918b7a23bb22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteExpense",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY0OTZhYTRkMjE0ODRkODlkYjVjYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDk4OTI3NCwiZXhwIjoxNzM1MDc1Njc0fQ.HfKaoMJo-FgyIhAOYht-wOQYsqrnIy29ZwTQmeB_shs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/expenses/6769e2dc9a71eadf8b6953b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"expenses",
+								"6769e2dc9a71eadf8b6953b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "csv",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTIzMzM0NywiZXhwIjoxNzM1MzE5NzQ3fQ.uGLdXXi2hOZv5zdRXkscNQvhjIa7VhFEPUEHO2JVjf0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/bankSSSSS.csv.txt"
+								},
+								{
+									"key": "category",
+									"value": "Transport",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bankstatment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY0OTZhYTRkMjE0ODRkODlkYjVjYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTA3ODQwMywiZXhwIjoxNzM1MTY0ODAzfQ.cF_wI0rszxDtXNKhk80TKTGFX6CtyXtTM8aQnt8D6iM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "statementFile",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/bankSSSSS.csv.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/bankstatement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"bankstatement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addexpenceimage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNTU3ODQxMywiZXhwIjoxNzM1NjY0ODEzfQ.FKF9X6TNdK-CZQdopmBEZzjcBeV2LLP9bIbe9Rn_84g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "i like bike",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "350000",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-23",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Entertainment",
+									"type": "text"
+								},
+								{
+									"key": "recipeimage",
+									"type": "file",
+									"src": "/C:/Users/01/Pictures/Screenshots/aa.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/expenses/addexpenceimage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"expenses",
+								"addexpenceimage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credit Notes",
+			"item": [
+				{
+					"name": "Create Credit Notes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNjI3NDcxNCwiZXhwIjoxNzM2MzYxMTE0fQ.O-iwz7F-R4r1WRDmF2EfCuw2K2jLbkFXLpSaErhlShY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"invoiceID\": \"677dba6c42103f4d269dc8e0\",\r\n  \"returnedItems\": [\r\n    { \"itemID\": \"67771c4a278d72ec96411436\", \"quantity\": 5 }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/creditNotes/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"creditNotes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View All Credit Notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/creditNotes/viewAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"creditNotes",
+								"viewAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Credit Note By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/creditNotes/6760ad06eb8b9a7dccd472ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"creditNotes",
+								"6760ad06eb8b9a7dccd472ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Credit Note By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjODA1ZjQzYzlmYTA5ZmY4NjQ5ZTQiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNjI3NDcxNCwiZXhwIjoxNzM2MzYxMTE0fQ.O-iwz7F-R4r1WRDmF2EfCuw2K2jLbkFXLpSaErhlShY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/creditNotes/677dc165186631aebb1bd2cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"creditNotes",
+								"677dc165186631aebb1bd2cd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk uplode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZmMWE4NDFlZTBjMGZiMDBiMWZlOTgiLCJyb2xlIjoidXNlciIsImlhdCI6MTczNjI3MTQ1MSwiZXhwIjoxNzM2MzU3ODUxfQ.r67vZTKX1zvYPxjDvvLdzFd8WQx9d6uYbf0eHTto4WM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/creditnote.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/creditNotes/creditnotes/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"creditNotes",
+								"creditnotes",
+								"import"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Create Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "invoiceId",
+									"value": "6772d700893988f081ee3074",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/payments/create-payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"payments",
+								"create-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Capture Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "orderId",
+									"value": "order_PdXhTA22AvZrIe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/payments/capture-payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"payments",
+								"capture-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Payment By Payment ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/payments/payment/pay_PdZEI7nFuJygRF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"payments",
+								"payment",
+								"pay_PdZEI7nFuJygRF"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feedback",
+			"item": [
+				{
+					"name": "Add Feedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rating\": 5,\r\n  \"email\": \"mohit.mokariya@swiftrut.com\",\r\n  \"name\": \"Mokariya Mohit\",\r\n  \"title\": \"Excellent Product!\",\r\n  \"comment\": \"The product quality exceeded my expectations. Highly recommended!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/feedback/feedback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"feedback",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All FeedBack",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/feedback/feedback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"feedback",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SalsPerson",
+			"item": [
+				{
+					"name": "creatsalespersone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"Kevin\",\r\n\"email\" : \"kevin@gmail.com\",\r\n\"userId\" : \"6765a4fadcbcbe0306b0d2bf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/salespersons/creatsalespersone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"salespersons",
+								"creatsalespersone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getsinglesalespersone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"Kevin\",\r\n\"email\" : \"kevin@gmail.com\",\r\n\"userId\" : \"6765a4fadcbcbe0306b0d2bf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/salespersons/getsalespersonebyid/6766f9d6903239021f29966f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"salespersons",
+								"getsalespersonebyid",
+								"6766f9d6903239021f29966f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "salespersoncsv",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/01/Downloads/salesperson.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/salespersons/salespersonecsv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"salespersons",
+								"salespersonecsv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallsalespersone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"Kevin\",\r\n\"email\" : \"kevin@gmail.com\",\r\n\"userId\" : \"6765a4fadcbcbe0306b0d2bf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/salespersons/getallsalespersone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"salespersons",
+								"getallsalespersone"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "creatitem",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getallitem",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getsingleitem",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateitem",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "deleteitem",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item By User ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Verify QR Code",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Item By CSV",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchaseinvoices",
+			"item": [
+				{
+					"name": "csv",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "creat",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delet",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getall",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update Copy",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

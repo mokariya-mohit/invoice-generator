@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Template</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 rounded-lg">
+  <div class="max-w-4xl mx-auto my-8 bg-white rounded-lg shadow-md">
+    <!-- Header Section -->
+    <div class="rounded-t-lg flex flex-col md:flex-row mx-4 md:mx-10 border-b" style="border-color: #815ad6;">
+      <div class="w-full md:w-[30%] p-4" style="background-color: #815ad6;">
+        <img src="<%= invoice.image %>" alt="Company Logo" class="h-16 w-auto">
+      </div>
+      <div class="w-full md:w-[70%] text-center p-4 md:p-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="flex md:block items-center">
+            <span class="text-sm">Phone: <%= customerMobile %>
+            </span>
+          </div>
+          <div class="flex md:block items-center">
+            <span class="text-sm">Email: <%= customerEmail %></span>
+          </div>
+          <div class="flex md:block items-center">
+            <span class="text-sm">Website: Invoice.company.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Billing Information -->
+    <div class="mx-4 md:mx-14 rounded-lg">
+      <div class="flex flex-col md:flex-row justify-between items-center pb-5">
+        <div class="w-full md:w-[60%]">
+          <div class="space-y-2 border-b py-3">
+            <h3 class="font-semibold text-lg text-gray-700">Bill To:</h3>
+            <p class="text-sm"><%= invoice.customerName %></p>
+            <p class="text-sm">Address: Not Provided</p>
+            <p class="text-sm">City, State, ZIP: Not Provided</p>
+          </div>
+          <div class="space-y-2 pt-3">
+            <p class="text-lg font-semibold">Invoice #: <%= invoice.invoiceNumber %></p>
+            <p class="text-sm text-gray-500">Date: <%= new Date(invoice.invoiceDate).toLocaleDateString() %></p>
+            <p class="text-sm text-gray-500">Due: <%= new Date(invoice.dueDate).toLocaleDateString() %></p>
+          </div>
+        </div>
+        <div class="w-full md:w-[40%] text-right ps-0 md:ps-10">
+          <h2 class="text-4xl font-normal text-black pb-5">INVOICE</h2>
+        </div>
+      </div>
+
+      <!-- Table with Items -->
+      <div class="mt-6 overflow-x-auto bg-white rounded-lg shadow-md">
+        <table class="w-full border-collapse">
+          <thead class="transition-all duration-300 ease-in-out hover:shadow-lg" style="background-color: #815ad6; color: #ffffff;">
+            <tr>
+              <th class="text-left p-4 border-b">Item</th>
+              <th class="text-left p-4 border-b">Description</th>
+              <th class="text-right p-4 border-b">Quantity</th>
+              <th class="text-right p-4 border-b">Price</th>
+              <th class="text-right p-4 border-b">Tax</th>
+              <th class="text-right p-4 border-b">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% invoice.items.forEach((item) => { %>
+              <tr class="hover:bg-gray-100 transition-all duration-300 ease-in-out">
+                <td class="p-4 border-b"><%= item.name %></td>
+                <td class="p-4 border-b"><%= item.description %></td>
+                <td class="p-4 text-right border-b"><%= item.quantity %></td>
+                <td class="p-4 text-right border-b"><%= item.price.toFixed(2) %></td>
+                <td class="p-4 text-right border-b"><%= item.taxRate.toFixed(2) %></td>
+                <td class="p-4 text-right border-b"><%= item.total.toFixed(2) %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Payment Methods and Total -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <div class="mt-4">
+          <h3 class="text-purple-600 font-semibold text-lg mb-2">Terms</h3>
+          <p class="text-sm"><%= invoice.terms %></p>
+        </div>
+        <div class="mt-4 text-right">
+          <p class="font-bold text-xl text-gray-900">Subtotal: <%= invoice.subtotal.toFixed(2) %></p>
+          <p class="font-bold text-xl text-gray-900">Total: <%= invoice.total.toFixed(2) %></p>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="p-4 mb-3 text-center text-white" style="background-color: #815ad6;">
+        <p class="text-base">Thank you for your business!</p>
+        <p>You can <a href="<%= paymentLink.paymentLink %>" class="underline">Click here </a> to complete your payment process</p>
+        <br>
+        <a href="http://localhost:5173/review" target="_blank" class="underline">Leave a review</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

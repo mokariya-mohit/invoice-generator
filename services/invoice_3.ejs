@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Template</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <!-- Header Section -->
+    <div class="grid grid-cols-2 p-6" style="background-color: #9fadbf;">
+      <div>
+        <img src="<%= invoice.image %>" alt="Company Logo" class="h-16 w-auto"></div>
+      <div class="text-right">
+        <p class="text-white font-semibold">Invoice #</p>
+        <p class="text-white"><%= invoice.invoiceNumber %></p>
+      </div>
+    </div>
+
+    <!-- Client and Billing Information -->
+    <div class="p-6">
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold text-gray-800">Billing To:</h2>
+        <p class="text-gray-600"><%= invoice.customerName %></p>
+        <p class="text-gray-600">Date: <%= new Date(invoice.invoiceDate).toLocaleDateString() %></p>
+        <p class="text-gray-600">Due Date: <%= new Date(invoice.dueDate).toLocaleDateString() %></p>
+      </div>
+    </div>
+
+    <!-- Items Table -->
+    <div class="p-6">
+      <table class="w-full border-collapse">
+        <thead style="background-color: #9fadbf;">
+          <tr>
+            <th class="p-3 text-left text-white">Description</th>
+            <th class="p-3 text-right text-white">Quantity</th>
+            <th class="p-3 text-right text-white">Unit Price</th>
+            <th class="p-3 text-right text-white">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% invoice.items.forEach((item) => { %>
+            <tr class="border-b">
+              <td class="p-3"><%= item.description %></td>
+              <td class="p-3 text-right"><%= item.quantity %></td>
+              <td class="p-3 text-right">$<%= item.price.toFixed(2) %></td>
+              <td class="p-3 text-right">$<%= item.total.toFixed(2) %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Total Section -->
+    <div class="p-6 text-right">
+      <p class="text-lg font-bold text-gray-800">TOTAL: $<%= invoice.total.toFixed(2) %></p>
+    </div>
+
+    <!-- Terms & Conditions -->
+    <div class="p-6" style="background-color: #9fadbf;">
+      <h3 class="text-white font-semibold">Terms & Conditions</h3>
+      <p class="text-white text-sm">
+        Payment is due within 30 days. A late fee of 5% will apply after the due date. For any inquiries, please contact us at info@company.com.
+      </p>
+      <p>You can <a href="<%= paymentLink.paymentLink %>" class="underline">Click here </a> to complete your payment
+        process</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="p-3 text-center" style="background-color: #9fadbf;">
+      <p class="text-white">Thank you for your business!</p>
+    </div>
+  </div>
+</body>
+
+</html>
