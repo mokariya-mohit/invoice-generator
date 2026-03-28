@@ -98,12 +98,6 @@ The Invoich backend is a robust server-side application designed to support the 
 - Cloudinary account (for file uploads)
 - Razorpay and Twilio accounts (for payments and notifications)
 
-## LIVE URL
-```
-https://invoich-backend-2.onrender.com
-```
-
-
 
 ## Git Clone URL
 
